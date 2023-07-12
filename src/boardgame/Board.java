@@ -44,12 +44,7 @@ public class Board {
 		}
 		return pieces[position.getRow()][position.getColumn()];
 	}
-	
-<<<<<<< HEAD
-	public void placePiece(Piece piece, Position position) {
-		pieces[position.getRow()][position.getColumn()] = piece;
-		piece.position = position;
-=======
+
 	public boolean positionExits(int row, int column) {
 		
 		return row >= 0 && row < rows && column >= 0 && column < columns;
@@ -57,7 +52,7 @@ public class Board {
 	}
 	public boolean positionExits(Position position) {
 		 return positionExits(position.getRow(), position.getColumn());
->>>>>>> master
+
 	}
 	
 	public boolean thereIsAPiece(Position position) {
