@@ -38,6 +38,18 @@ public class Board {
 		piece.position = position;
 	}
 	
+	public Piece removepiece(Position position) {
+		if(!positionExits(position)) {
+			throw new BoardExcpetion("Position not on the board");
+		}else if(piece(position) == null) {
+			return null;
+		}
+		Piece aux = piece(position);
+		aux.position = null;
+		pieces[position.getRow()][position.getColumn()] = null;
+		return aux;
+	}
+	
 	public Piece piece(Position position) {
 		if(!positionExits(position)){
 			throw new BoardExcpetion("Position not on the board");
